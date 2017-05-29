@@ -102,6 +102,8 @@
     <ClInclude Include="Application2D.h" />
     <ClInclude Include="dyna.h" />
     <ClInclude Include="entity.h" />
+    <ClInclude Include="Graph.h" />
+    <ClInclude Include="GraphNode.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="listNode.h" />
     <ClInclude Include="ObjectPool.h" />

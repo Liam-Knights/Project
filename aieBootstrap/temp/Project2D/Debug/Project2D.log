@@ -1,7 +1,5 @@
 ﻿  stateMachine.cpp
-c:\users\s171162\desktop\projects\aiebootstrap\project2d\state.h(11): error C2061: syntax error: identifier 'Renderer2D'
-c:\users\s171162\desktop\projects\aiebootstrap\project2d\statemachine.h(14): error C2061: syntax error: identifier 'Renderer2D'
-  main.cpp
   State.cpp
-c:\users\s171162\desktop\projects\aiebootstrap\project2d\state.h(11): error C2061: syntax error: identifier 'Renderer2D'
   Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Project2D.vcxproj -> C:\Users\s171162\Desktop\projects\aieBootstrap\temp\Project2D\Debug\Project2D.exe
