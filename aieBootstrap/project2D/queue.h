@@ -30,7 +30,7 @@ public:
 
 	int size()
 	{
-		return Q.count();
+		return Q.size();
 		
 	}
 

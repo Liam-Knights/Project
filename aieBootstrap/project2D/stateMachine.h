@@ -17,6 +17,7 @@ public:
 
 
 private:
+		int m_nCurrentState;
 		dynamArray<State*> m_StateList;
 };
 

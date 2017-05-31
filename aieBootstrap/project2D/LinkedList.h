@@ -88,7 +88,7 @@ public:
 
 	}
 	
-	int count()
+	int size()
 	{
 		return nCount;
 	}

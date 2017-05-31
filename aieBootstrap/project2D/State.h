@@ -10,7 +10,7 @@ public:
 
 	virtual void OnEnter() = 0;
 	virtual void OnUpdate(float fDeltaTime) = 0;
-	virtual void OnDRaw(Renderer2D* m_2dRender) = 0;
+	virtual void OnDraw(Renderer2D* m_2dRender) = 0;
 	virtual void OnExit() = 0;
 
 
