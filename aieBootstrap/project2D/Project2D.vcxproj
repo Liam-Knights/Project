@@ -96,7 +96,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ObjectPool.cpp" />
     <ClCompile Include="State.cpp" />
-    <ClCompile Include="stateMachine.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h" />
@@ -110,9 +110,9 @@
     <ClInclude Include="queue.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resourceManag.h" />
-    <ClInclude Include="stack.h" />
+    <ClInclude Include="Stack.h" />
     <ClInclude Include="State.h" />
-    <ClInclude Include="stateMachine.h" />
+    <ClInclude Include="StateMachine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

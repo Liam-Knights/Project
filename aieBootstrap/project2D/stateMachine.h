@@ -1,23 +1,23 @@
 #pragma once
 #include "Renderer2D.h"
-#include "dyna.h"
+#include "dyna.h" 
 #include "State.h"
+#include "Stack.h"
+using namespace aie;
 
-
-class stateMachine
+class StateMachine
 {
 public:
-	stateMachine();
-	~stateMachine();
+	StateMachine();
+	~StateMachine();
 
-	void Update(float fDeltaTime);
-	void Draw(Renderer2D* m_2dRender);
-	void setState(int nStateIndex);
-	void addState(int nStateIndex, State* pState);
-
+	void Update(float deltaTime);
+	void Draw(Renderer2D* m_2dRenderer);
+	void PushState(int nStateIndex);
+	void AddState(int nStateIndex, State* pState);
+	void PopState();
 
 private:
-		int m_nCurrentState;
-		dynamArray<State*> m_StateList;
+	dynamArray<State*> m_StateList;
+	Stack<State*> m_CurrentStack;
 };
-

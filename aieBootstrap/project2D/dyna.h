@@ -145,6 +145,23 @@ public:
 		return m_nCapacity;
 	}
 
+	bool empty()
+	{
+		if (m_nUsed <= 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	t back()
+	{
+		return data[m_nUsed - 1];
+	}
+
 
 private:
 	dynamArray& operator= (const dynamArray& other) = default;

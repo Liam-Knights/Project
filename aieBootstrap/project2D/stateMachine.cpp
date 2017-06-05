@@ -1,46 +1,67 @@
-#include "stateMachine.h"
+#include "StateMachine.h"
+#include <crtdbg.h>
+#include "Renderer2D.h"
 
+using namespace aie;
 
-
-stateMachine::stateMachine()
+StateMachine::StateMachine()
 {
-	m_nCurrentState = -1;
 }
 
-
-stateMachine::~stateMachine(){}
-
-
-void stateMachine::Update(float fDeltaTime)
+StateMachine::~StateMachine()
 {
-	if (m_StateList.Size() <= 0)
+	while (m_CurrentStack.size() > 0)
+		PopState();
+
+	for (int i = 0; i < m_StateList.Size(); ++i)
 	{
+		delete m_StateList[i];
+	}
+}
+
+void StateMachine::Update(float deltaTime)
+{
+	if (m_CurrentStack.size() <= 0)
 		return;
-	}
-	m_StateList[m_nCurrentState]->OnUpdate(fDeltaTime);
+	
+	m_CurrentStack.top()->OnUpdate(deltaTime, this);
+
 }
 
-void stateMachine::Draw(Renderer2D* m_2dRender)
+
+void StateMachine::Draw(Renderer2D* m_2dRenderer)
 {
-	if (m_StateList.Size() <= 0)
-	{
+	if (m_CurrentStack.size() <= 0)
 		return;
-	}
-	m_StateList[m_nCurrentState]->OnDraw(m_2dRender);
+
+	m_CurrentStack.top()->OnDraw(m_2dRenderer);
 }
 
-void stateMachine::setState(int nStateIndex)
+void StateMachine::PushState(int nStateIndex)
 {
-	if (m_StateList.Size() <= 0)
-	{
-		m_StateList[m_nCurrentState]->OnExit();
-	}
-	m_nCurrentState = nStateIndex;
+	// Example of Assert
+	/*_ASSERT(nStateIndex < m_StateList.Size());
+	if (nStateIndex >= m_StateList.Size())
+		return;*/
 
-	m_StateList[m_nCurrentState]->OnEnter();
+	if (m_CurrentStack.size() > 0)
+		m_CurrentStack.top()->OnExit();
+
+	m_CurrentStack.push(m_StateList[nStateIndex]);
+	m_CurrentStack.top()->OnEnter();
 }
 
-void stateMachine::addState(int nStateIndex, State* pState)
+void StateMachine::PopState()
+{
+	if (m_CurrentStack.size() > 0)
+		m_CurrentStack.top()->OnExit();
+	
+	m_CurrentStack.pop();
+	if (m_CurrentStack.size() > 0)
+		m_CurrentStack.top()->OnEnter();
+}
+
+void StateMachine::AddState(int nStateIndex, State* pState)
 {
 	m_StateList.insert(nStateIndex, pState);
 }
