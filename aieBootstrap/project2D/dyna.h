@@ -24,7 +24,7 @@ public:
 
 	~dynamArray() 
 	{
-		delete data;
+		delete[] data;
 	}
 
 	dynamArray(const dynamArray& other)
@@ -34,7 +34,7 @@ public:
 		m_nUsed = other.m_nUSed;
 
 		data = new t[m_nCapacity];
-		mempcy(data, other.data, sizeof(t) *.m_nCapacity);
+		mempcy(data, other.data, sizeof(t) * m_nCapacity);
 	}
 
 	void pushBack(t value)
@@ -62,7 +62,7 @@ public:
 		{
 			resize();
 		}
-		for (int i = m_nUsed; i >= index; --i)
+		for (int i = m_nUsed - 1; i >= index; --i)
 		{
 			data[i + 1] = data[i];
 		}

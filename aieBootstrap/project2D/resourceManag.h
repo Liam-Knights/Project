@@ -9,7 +9,7 @@ class resourceManag
 public:
 
 
-	t* loadResource(char* szFileName)
+	t* loadResource(char* szFileName, int size)
 	{
 		for (int i = 0; i < m_ResourceList.Size(); ++i)
 		{
@@ -18,9 +18,10 @@ public:
 				return m_ResourceList[i]->m_Data;
 			}
 		}
-		resource* pResource = new resource(szFileName);
-		m_ResourceList->pushBack(pResource);
+		resource<t>* pResource = new resource<t>(szFileName, size);
+		m_ResourceList.pushBack(pResource);
 		return pResource->m_Data;
+		
 	}
 	
 	void unloadAll()
@@ -32,24 +33,24 @@ public:
 		m_ResourceList.clear();
 	}
 
-	void create()
+	static void create()
 	{
-		if (m_Pinstance)
+		if (!m_Pinstance)
 		{
 			m_Pinstance = new resourceManag<t>();
 		}
 	}
 
-	void Delete()
+	static void Delete()
 	{
 		delete m_Pinstance;
+		delete pResource;
 	}
 
-	static resourceManag<t>T getinstance(
+	static resourceManag<t>* getinstance()
 	{
 		return m_Pinstance;
 	}
-	)
 
 private:
 	resourceManag() {}
@@ -59,7 +60,7 @@ private:
 	}
 
 	dynamArray<resource<t>*> m_ResourceList;
-	static resourceManag<t> m_Pinstance;
+	static resourceManag<t>* m_Pinstance;
 
 };
 

@@ -1,5 +1,6 @@
 #pragma once
 #include "State.h"
+
 class loadScreen : public State
 {
 public:
@@ -13,6 +14,6 @@ public:
 private:
 	
 	float m_timer;
-	aie::Font* m_font;
+	Font* m_font;
 };
 

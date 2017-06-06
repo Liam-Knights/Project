@@ -93,6 +93,7 @@
   <ItemGroup>
     <ClCompile Include="Application2D.cpp" />
     <ClCompile Include="entity.cpp" />
+    <ClCompile Include="loadScreen.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ObjectPool.cpp" />
     <ClCompile Include="State.cpp" />
@@ -106,6 +107,7 @@
     <ClInclude Include="GraphNode.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="listNode.h" />
+    <ClInclude Include="loadScreen.h" />
     <ClInclude Include="ObjectPool.h" />
     <ClInclude Include="queue.h" />
     <ClInclude Include="resource.h" />
