@@ -17,24 +17,13 @@ bool Application2D::startup()
 {
 	m_2dRenderer = new Renderer2D();
 
-	m_shipTexture = new Texture("./textures/ship.png");
 
-	m_font = new Font("./font/consolas.ttf", 32);
-
-	m_audio = new Audio("./audio/powerup.wav");
-
-	m_cameraX = 0;
-	m_cameraY = 0;
-	m_timer = 0;
 
 	return true;
 }
 
 void Application2D::shutdown() 
 {
-	delete m_audio;
-	delete m_font;
-	delete m_shipTexture;
 	delete m_2dRenderer;
 }
 
@@ -78,9 +67,6 @@ void Application2D::draw()
 	// begin drawing sprites
 	m_2dRenderer->begin();
 
-	// demonstrate spinning sprite
-	m_2dRenderer->setUVRect(0,0,1,1);
-	m_2dRenderer->drawSprite(m_shipTexture, 600, 1000, 0, 0, m_timer, 6);
 
 	// draw a thin line
 	m_2dRenderer->drawLine(300, 300, 500, 400, 2, 1);
@@ -97,11 +83,7 @@ void Application2D::draw()
 	m_2dRenderer->setRenderColour(1, 1, 0, 1);
 	m_2dRenderer->drawSprite(nullptr, 400, 400, 50, 50, 3.14159f * 0.25f, 1);
 	
-	// output some text, uses the last used colour
-	char fps[32];
-	sprintf_s(fps, 32, "FPS: %i", getFPS());
-	m_2dRenderer->drawText(m_font, fps, 0, 720 - 32);
-	m_2dRenderer->drawText(m_font, "Press Space for sound!", 0, 900 - 64);
+	// output some text, uses the last used colou
 
 	// done drawing sprites
 	m_2dRenderer->end();
