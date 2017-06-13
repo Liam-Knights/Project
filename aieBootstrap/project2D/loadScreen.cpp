@@ -15,7 +15,7 @@ loadScreen::loadScreen()
 
 loadScreen::~loadScreen()
 {
-	OnExit();
+	delete m_font;
 }
 
 void loadScreen::OnEnter()
@@ -35,10 +35,10 @@ void loadScreen::OnUpdate(float fDeltaTime, StateMachine* pMachine)
 
 void loadScreen::OnDraw(Renderer2D* m_2dRenderer)
 {
-	m_2dRenderer->drawText(m_font, "please wait for loading screen", 350, 100);
+	m_2dRenderer->drawText(m_font, "please wait for loading screen", 250, 400);
 }
 
 void loadScreen::OnExit()
 {
-	delete m_font;
+	
 }

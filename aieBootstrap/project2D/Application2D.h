@@ -24,7 +24,8 @@ protected:
 	aie::Font*			m_font;
 	aie::Audio*			m_audio;
 
-	StateMachine*		m_loadScreen;
+	StateMachine*		m_stateMachine;
+
 	float m_cameraX, m_cameraY;
 	float m_timer;
 };

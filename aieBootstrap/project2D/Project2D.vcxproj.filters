@@ -36,6 +36,9 @@
     <ClCompile Include="loadScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="splash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h">
@@ -81,6 +84,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="loadScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="splash.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

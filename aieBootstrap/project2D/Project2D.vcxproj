@@ -96,6 +96,7 @@
     <ClCompile Include="loadScreen.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ObjectPool.cpp" />
+    <ClCompile Include="splash.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateMachine.cpp" />
   </ItemGroup>
@@ -112,6 +113,7 @@
     <ClInclude Include="queue.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resourceManag.h" />
+    <ClInclude Include="splash.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateMachine.h" />
