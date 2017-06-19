@@ -21,3 +21,12 @@ bool entity::getActive()
 {
 	return m_bActive;
 }
+
+void entity::updateGlobalTransform(float fDeltaTime)
+{
+
+}
+void entity::Draw(aie::Renderer2D* m_2dRender)
+{
+
+}

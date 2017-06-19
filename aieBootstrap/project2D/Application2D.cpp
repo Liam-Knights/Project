@@ -5,6 +5,7 @@
 #include "loadScreen.h"
 #include "splash.h"
 #include "resourceManag.h"
+#include "MenuState.h"
 
 using namespace aie;
 
@@ -23,10 +24,12 @@ bool Application2D::startup()
 	resourceManag<Font>::create();
 
 	m_stateMachine = new StateMachine();
-	m_stateMachine->AddState(0, new splash());
-	m_stateMachine->AddState(1, new loadScreen());
+	m_stateMachine->AddState(0, new MenuState());
+	m_stateMachine->AddState(1, new splash());
+	m_stateMachine->AddState(2, new loadScreen());
 	m_stateMachine->PushState(0);
 	m_stateMachine->PushState(1);
+	m_stateMachine->PushState(2);
 
 
 	return true;
