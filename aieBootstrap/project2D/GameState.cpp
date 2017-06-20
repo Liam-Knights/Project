@@ -34,12 +34,17 @@ void GameState::OnUpdate(float fDeltaTime, StateMachine* pMachine)
 	{
 
 	}
+	if (input->isKeyDown(INPUT_KEY_P))
+	{
+		pMachine->PushState(4);
+	}
 	
 }
 
 void GameState::OnDraw(Renderer2D* m_2dRenderer)
 {
-	m_2dRenderer->drawText(m_font, "GameState screen", 450, 400);
+	m_2dRenderer->drawText(m_font, "ENTER TO SPAWN OBJECT", 450, 400);
+	m_2dRenderer->drawText(m_font, "P TO PAUSE THE GAME", 250, 300);
 }
 
 void GameState::OnExit()

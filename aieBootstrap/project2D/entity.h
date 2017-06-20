@@ -6,8 +6,8 @@ public:
 	entity();
 	~entity();
 
-	void setActive(bool bActive);
-	bool getActive();
+	virtual void setActive(bool bActive);
+	virtual bool getActive();
 
 	//function made to update the entire program
 	virtual void updateGlobalTransform(float fDeltaTime);

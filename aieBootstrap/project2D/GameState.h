@@ -1,8 +1,9 @@
 #pragma once
 #include "State.h"
 #include "ObjectPool.h"
+#include "GameObj.h"
 
-class GameState
+class GameState : public State
 {
 public:
 	GameState();
