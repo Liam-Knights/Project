@@ -7,6 +7,7 @@
 #include "resourceManag.h"
 #include "MenuState.h"
 #include "GameState.h"
+#include "PauseState.h"
 
 using namespace aie;
 
@@ -25,10 +26,13 @@ bool Application2D::startup()
 	resourceManag<Font>::create();
 
 	m_stateMachine = new StateMachine();
+	
 	m_stateMachine->AddState(0, new GameState());
 	m_stateMachine->AddState(1, new MenuState());
 	m_stateMachine->AddState(2, new splash());
 	m_stateMachine->AddState(3, new loadScreen());
+	m_stateMachine->AddState(4, new PauseState());
+
 	m_stateMachine->PushState(0);
 	m_stateMachine->PushState(1);
 	m_stateMachine->PushState(2);

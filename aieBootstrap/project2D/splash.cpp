@@ -18,7 +18,7 @@ splash::~splash()
 	delete m_font;
 }
 
-void splash::OnEnter()
+void splash::OnEnter(StateMachine* pMachine)
 {
 
 }
@@ -38,7 +38,7 @@ void splash::OnDraw(Renderer2D* m_2dRenderer)
 	m_2dRenderer->drawText(m_font, "splash screen", 450, 400);
 }
 
-void splash::OnExit()
+void splash::OnExit(StateMachine* pMachine)
 {
 
 }

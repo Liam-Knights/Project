@@ -1,6 +1,7 @@
 #pragma once
 #include "Renderer2D.h"
-class entity;
+#include "GameObj.h"
+class GameObj;
 
 class ObjectPool
 {
@@ -9,14 +10,14 @@ public:
 	ObjectPool(int nMaxSize);
 
 	~ObjectPool();
-	entity* Allocate();
-	void DeAllocate(entity* object);
+	GameObj* Allocate();
+	void DeAllocate(GameObj* object);
 	void Update(float fDeltaTime);
 	void Draw(aie::Renderer2D* m_2dRenderer);
 
 private:
 
-	entity** m_pPool;
+	GameObj** m_pPool;
 	int m_nMaxSize;
 };
 

@@ -162,7 +162,10 @@ public:
 		return data[m_nUsed - 1];
 	}
 
-
+	t SecondLast()
+	{
+		return data[m_nUsed - 2];
+	}
 private:
 	dynamArray& operator= (const dynamArray& other) = default;
 	dynamArray(dynamArray&& other) = default;

@@ -18,7 +18,7 @@ loadScreen::~loadScreen()
 	delete m_font;
 }
 
-void loadScreen::OnEnter()
+void loadScreen::OnEnter(StateMachine* pMachine)
 {
 	
 }
@@ -38,7 +38,7 @@ void loadScreen::OnDraw(Renderer2D* m_2dRenderer)
 	m_2dRenderer->drawText(m_font, "please wait for loading screen", 250, 400);
 }
 
-void loadScreen::OnExit()
+void loadScreen::OnExit(StateMachine* pMachine)
 {
 	
 }

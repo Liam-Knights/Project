@@ -99,6 +99,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="ObjectPool.cpp" />
+    <ClCompile Include="PauseState.cpp" />
     <ClCompile Include="splash.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateMachine.cpp" />
@@ -116,6 +117,7 @@
     <ClInclude Include="loadScreen.h" />
     <ClInclude Include="MenuState.h" />
     <ClInclude Include="ObjectPool.h" />
+    <ClInclude Include="PauseState.h" />
     <ClInclude Include="queue.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resourceManag.h" />

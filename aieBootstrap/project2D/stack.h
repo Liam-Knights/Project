@@ -34,6 +34,11 @@ public:
 		return s.back();
 	}
 
+	T SecondLast()
+	{
+		return s.SecondLast();
+	}
+
 	void Clear()
 	{
 		s.Clear();

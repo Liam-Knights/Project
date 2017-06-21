@@ -17,7 +17,7 @@ MenuState::~MenuState()
 	delete m_font;
 }
 
-void MenuState::OnEnter()
+void MenuState::OnEnter(StateMachine* pMachine)
 {
 	
 }
@@ -36,7 +36,7 @@ void MenuState::OnDraw(Renderer2D* m_2dRenderer)
 	m_2dRenderer->drawText(m_font, "press enter to play", 100, 600);
 }
 
-void MenuState::OnExit()
+void MenuState::OnExit(StateMachine* pMachine)
 {
 	
 }

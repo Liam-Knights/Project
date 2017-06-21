@@ -17,7 +17,9 @@ public:
 	void AddState(int nStateIndex, State* pState);
 	void PopState();
 
+	void setBackround(bool OnOff);
 private:
+	bool onoff = false;
 	dynamArray<State*> m_StateList;
 	Stack<State*> m_CurrentStack;
 };

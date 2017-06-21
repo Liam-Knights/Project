@@ -4,11 +4,11 @@
 ObjectPool::ObjectPool(int nMaxSize)
 {
 	m_nMaxSize = nMaxSize;
-	m_pPool = new entity*[nMaxSize];
+	m_pPool = new GameObj*[nMaxSize];
 
 	for (int i = 0; i < nMaxSize; ++i)
 	{
-		m_pPool[i] = new entity();
+		m_pPool[i] = new GameObj();
 	}
 }
 
@@ -21,7 +21,7 @@ ObjectPool::~ObjectPool()
 	delete[] m_pPool;
 }
 
-entity* ObjectPool::Allocate() 
+GameObj* ObjectPool::Allocate() 
 {
 	for (int i = 0; i < m_nMaxSize; ++i)
 	{
@@ -35,7 +35,7 @@ entity* ObjectPool::Allocate()
 	return nullptr;
 }
 
-void ObjectPool::DeAllocate(entity* object)
+void ObjectPool::DeAllocate(GameObj* object)
 {
 	object->setActive(false);
 }
@@ -64,4 +64,5 @@ void ObjectPool::Draw(aie::Renderer2D* m_2dRenderer)
 		else
 			return;
 	}
+	
 }
