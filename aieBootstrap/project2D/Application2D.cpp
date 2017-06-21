@@ -8,6 +8,7 @@
 #include "MenuState.h"
 #include "GameState.h"
 #include "PauseState.h"
+#include <crtdbg.h>
 
 using namespace aie;
 
@@ -21,10 +22,12 @@ Application2D::~Application2D()
 
 bool Application2D::startup() 
 {
+	_ASSERT(m_2dRenderer);
 	m_2dRenderer = new Renderer2D();
 
 	resourceManag<Font>::create();
 
+	_ASSERT(m_stateMachine);
 	m_stateMachine = new StateMachine();
 	
 	m_stateMachine->AddState(0, new GameState());

@@ -3,6 +3,7 @@
 #include "stateMachine.h"
 #include "font.h"
 #include "Input.h"
+#include <crtdbg.h>
 
 
 GameState::GameState()
@@ -11,6 +12,7 @@ GameState::GameState()
 	resourceManag<Font>* GameStateMan = resourceManag<Font>::getinstance();
 	m_font = GameStateMan->loadResource("./font/consolas_italic.ttf", 50);
 
+	_ASSERT(Obj01);
 	Obj01 = new ObjectPool(15);
 
 }

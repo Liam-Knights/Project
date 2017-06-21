@@ -1,6 +1,6 @@
 #pragma once
 #include <memory.h>
-
+#include <crtdbg.h>
 
 template <typename t>
 class dynamArray
@@ -17,6 +17,7 @@ public:
 			cap = 1;
 		}
 
+		_ASSERT(data);
 		data = new t[cap];
 		m_nCapacity = cap;
 		m_nUsed = 0;
@@ -33,6 +34,7 @@ public:
 		m_nCapacity = other.m_nCapacity;
 		m_nUsed = other.m_nUSed;
 
+		_ASSERT(data);
 		data = new t[m_nCapacity];
 		mempcy(data, other.data, sizeof(t) * m_nCapacity);
 	}
@@ -72,6 +74,7 @@ public:
 
 	void resize()
 	{
+		_ASSERT(newData);
 		t* newData = new t[m_nCapacity * 2];
 		memcpy(newData, data, sizeof(t) * m_nCapacity);
 		delete data;
@@ -122,6 +125,7 @@ public:
 		{
 			nCapacity = 1;
 		}
+		_ASSERT(newData);
 		t* newData = new t[m_nCapacity];
 		memcpy(newData, data, sizeof(t) * m_nCapacity);
 		delete data;

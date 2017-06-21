@@ -23,7 +23,7 @@ void GameObj::updateGlobalTransform(float fDeltaTime)
 	m_timer += fDeltaTime;
 
 	if (m_timer > 15)
-	{
+	{ 
 		m_bActive = false;
 
 		m_timer = 0;

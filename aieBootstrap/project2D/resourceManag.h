@@ -2,6 +2,7 @@
 #include "dyna.h"
 #include "resource.h"
 #include "string.h"
+#include <crtdbg.h>
 
 template <typename t> 
 class resourceManag
@@ -18,6 +19,7 @@ public:
 				return m_ResourceList[i]->m_Data;
 			}
 		}
+		_ASSERT(pResource);
 		resource<t>* pResource = new resource<t>(szFileName, size);
 		m_ResourceList.pushBack(pResource);
 		return pResource->m_Data;
@@ -36,7 +38,8 @@ public:
 	static void create()
 	{
 		if (!m_Pinstance)
-		{
+		{	
+			_ASSERT(m_Pinstance);
 			m_Pinstance = new resourceManag<t>();
 		}
 	}
