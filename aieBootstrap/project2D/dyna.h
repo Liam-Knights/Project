@@ -74,8 +74,9 @@ public:
 
 	void resize()
 	{
-		_ASSERT(newData);
+		
 		t* newData = new t[m_nCapacity * 2];
+		_ASSERT(newData);
 		memcpy(newData, data, sizeof(t) * m_nCapacity);
 		delete data;
 		data = newData;

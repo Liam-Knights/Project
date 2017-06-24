@@ -19,8 +19,9 @@ public:
 				return m_ResourceList[i]->m_Data;
 			}
 		}
-		_ASSERT(pResource);
+		
 		resource<t>* pResource = new resource<t>(szFileName, size);
+		_ASSERT(pResource);
 		m_ResourceList.pushBack(pResource);
 		return pResource->m_Data;
 		
@@ -39,8 +40,9 @@ public:
 	{
 		if (!m_Pinstance)
 		{	
-			_ASSERT(m_Pinstance);
+			
 			m_Pinstance = new resourceManag<t>();
+			_ASSERT(m_Pinstance);
 		}
 	}
 
