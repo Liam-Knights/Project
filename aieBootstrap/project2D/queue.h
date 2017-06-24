@@ -5,7 +5,9 @@ template <typename t>
 class queue
 {
 public:
+	//defualt constructor
 	queue(){}
+	//default destructor
 	~queue(){}
 
 	void push(t value)

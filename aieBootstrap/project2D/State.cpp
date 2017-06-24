@@ -4,9 +4,11 @@
 
 State::State()
 {
+	//default
 }
 
 
 State::~State()
 {
+	//default
 }

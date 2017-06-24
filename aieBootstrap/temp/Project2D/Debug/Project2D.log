@@ -1,16 +1,22 @@
-﻿Build started 24/06/17 5:41:52 PM.
+﻿Build started 24/06/17 9:17:07 PM.
      1>Project "C:\Users\liam\Desktop\dif code stuff\aieBootstrap\Project2D\Project2D.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Users\liam\Desktop\dif code stuff\aieBootstrap\Project2D\includes" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"C:\Users\liam\Desktop\dif code stuff\aieBootstrap\temp\Project2D\Debug\\" /Fd"C:\Users\liam\Desktop\dif code stuff\aieBootstrap\temp\Project2D\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Application2D.cpp GameObj.cpp GameState.cpp MenuState.cpp PauseState.cpp loadScreen.cpp splash.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Users\liam\Desktop\dif code stuff\aieBootstrap\Project2D\includes" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"C:\Users\liam\Desktop\dif code stuff\aieBootstrap\temp\Project2D\Debug\\" /Fd"C:\Users\liam\Desktop\dif code stuff\aieBootstrap\temp\Project2D\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Application2D.cpp GameObj.cpp GameState.cpp MenuState.cpp ObjectPool.cpp PauseState.cpp StateMachine.cpp entity.cpp loadScreen.cpp main.cpp splash.cpp
+         entity.cpp
+         GameObj.cpp
+     1>c:\users\liam\desktop\dif code stuff\aiebootstrap\project2d\gameobj.cpp(13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\liam\desktop\dif code stuff\aiebootstrap\project2d\gameobj.cpp(38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
          Application2D.cpp
          Generating Code...
          Compiling...
          splash.cpp
+         main.cpp
          loadScreen.cpp
+         StateMachine.cpp
          PauseState.cpp
+         ObjectPool.cpp
          MenuState.cpp
          GameState.cpp
-         GameObj.cpp
          Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\liam\Desktop\dif code stuff\aieBootstrap\temp\Project2D\Debug\Project2D.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\liam\Desktop\dif code stuff\aieBootstrap\Project2D\lib" bootstrap.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib MathLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\liam\Desktop\dif code stuff\aieBootstrap\temp\Project2D\Debug\Project2D.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\liam\Desktop\dif code stuff\aieBootstrap\temp\Project2D\Debug\Project2D.lib" /MACHINE:X86 "C:\Users\liam\Desktop\dif code stuff\aieBootstrap\temp\Project2D\Debug\Application2D.obj"
@@ -30,4 +36,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.03
+Time Elapsed 00:00:06.66

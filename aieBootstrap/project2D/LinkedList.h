@@ -8,6 +8,7 @@ template <typename t>
 class LinkedList
 {
 public:
+	//constructorthat sets the start and end values
 	LinkedList() 
 	{
 		_ASSERT(start);
@@ -20,12 +21,14 @@ public:
 		end->prev = start;
 
 	}
+	//destructor deletes the start and end pointers
 	~LinkedList() 
 	{
 		delete start;
 		delete end;
 	}
 
+	//inserts a value inbetween specific variables
 	void insert(t value, listNode<t>* prev, listNode<t>* next)
 	{
 		_ASSERT(N1);
@@ -38,15 +41,18 @@ public:
 		++nCount;
 	}
 
+	//inserts a variable at the end
 	void pushback(t value)
 	{
 		insert(value, end->prev, end);
 	}
 
+	//inserts a variiable at the start
 	void pushFront(t value)
 	{
 		insert(value, start, start->next);
 	}
+
 
 	void IndexInsert(int index, t values)
 	{
@@ -63,6 +69,7 @@ public:
 		insert(value, current, current->next)
 	}
 
+	// shows the first variable or f the list is empty
 	t first()
 	{
 		if (start->next == end)
@@ -77,6 +84,7 @@ public:
 		}
 	}
 
+	//shows the last variable or if the list is empty
 	t last()
 	{
 		if (start->next == end)
@@ -91,12 +99,13 @@ public:
 		}
 
 	}
-	
+	//shows the size of the array
 	int size()
 	{
 		return nCount;
 	}
 
+	//erases a variable in the array
 	void erase(int index)
 	{
 		listNode<t>* current = start;
@@ -119,6 +128,7 @@ public:
 		delete current;
 	}
 
+	//removes a specific variable
 	void remove(t value)
 	{
 		listNode<t>* temp = nullptr;
@@ -142,6 +152,7 @@ public:
 		}
 	}
 
+	//pops a variable of the front
 	t popFront()
 	{
 		listNode<t>* n = start->next;
@@ -161,6 +172,7 @@ public:
 			return defualt;
 	}
 
+	//pops a variable off the end of the array
 	t popback()
 	{
 		listNode<t>* n = end->prev;
@@ -181,6 +193,7 @@ public:
 		}
 	}
 
+	//checks if the array is empty
 	bool empty()
 	{
 		if (start->next == end)
@@ -193,6 +206,7 @@ public:
 		}
 	}
 
+	//clears the array
 	void clear()
 	{
 		while (start-> != end)

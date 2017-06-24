@@ -9,7 +9,7 @@ class resourceManag
 {
 public:
 
-
+	//constructor gets the string for the text on screen each time its needed
 	t* loadResource(char* szFileName, int size)
 	{
 		for (int i = 0; i < m_ResourceList.Size(); ++i)
@@ -27,6 +27,7 @@ public:
 		
 	}
 	
+	//unloads all of the strings that have been used
 	void unloadAll()
 	{
 		for (int i = 0; i < m_ResourceList.Size(); ++i)
@@ -36,6 +37,7 @@ public:
 		m_ResourceList.clear();
 	}
 
+	//creates an instance for the strings or the resource its using
 	static void create()
 	{
 		if (!m_Pinstance)
@@ -46,12 +48,14 @@ public:
 		}
 	}
 
+	//deletes the instance and the resource pointers
 	static void Delete()
 	{
 		delete m_Pinstance;
 		delete pResource;
 	}
 
+	//returns instance
 	static resourceManag<t>* getinstance()
 	{
 		return m_Pinstance;

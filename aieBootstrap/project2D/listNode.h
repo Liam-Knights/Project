@@ -6,7 +6,9 @@ class listNode
 {
 
 public:
+	//default constructor
 	listNode() {};
+	//default destructor
 	~listNode() {};
 
 	t data;

@@ -6,6 +6,7 @@ template <typename t>
 class resource
 {
 public:
+	//constructor creates a string this is used to get the text on screen
 	resource(char* szFileName, int size)
 	{
 		int length = strlen(szFileName);
@@ -16,6 +17,7 @@ public:
 		_ASSERT(m_Data);
 		m_Data = new t(szFileName, size);
 	}
+	//destructor deletes all created pointers
 	~resource()
 	{
 		delete m_Data;
